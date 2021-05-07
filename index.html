@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <title>Quotes and Mottoes app</title>
+</head>
+
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <header class="header">
+                <h1 class="header-title">My Categories</h1>
+                <form class="sidebar-form" data-new-category-form>
+                    <div class="form-control">
+                        <input type="text" placeholder="Enter Category" data-new-category-input>
+                    </div>
+                    <button class="btn btn-primary">
+                        <i class="fa fa-plus" aria-hidden="true"></i> Add Category
+                    </button>
+                </form>
+            </header>
+            <ul class="sidebar-list" data-categories>
+                <li class="sidebar-item">All Categories</li>
+                <li class="sidebar-item">
+                    <input type="color" class="sidebar-color">
+                </li>
+                <li class="sidebar-item">
+                    <input type="color" class="sidebar-color">
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main -->
+        <main class="main">
+            <!-- Header -->
+            <header class="header">
+                <div>
+                    <h1 class="header-title">My favorite <strong>Quotes</strong></h1>
+                    <div class="currently-viewing" data-currently-viewing></div>
+                </div>
+
+                <!-- Create Quote Form -->
+                <form class="create-quote-form" data-new-quote-form>
+                    <div class="form-control">
+                        <select data-new-quote-select required>
+                            <option value="">All Categories</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" data-new-quote-input placeholder="Enter Quote" required>
+                    </div>
+                    <button class="btn btn-primary">
+                        <i class="fa fa-plus" aria-hidden="true"></i> Add Quote
+                    </button>
+                </form>
+
+                <!-- Update Quote Form -->
+                <form class="edit-quote-form" data-edit-quote-form>
+                    <div class="form-control">
+                        <select data-edit-quote-select>
+                            <option value="">All Categories</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" data-edit-quote-input placeholder="Enter Todo" required>
+                    </div>
+                    <button class="btn btn-primary">Save</button>
+                </form>
+            </header>
+
+            <!-- Cards -->
+            <section class="quotes-container" data-cards>
+                <div class="quote" style="">
+                    <div class="quote-tag" style="">
+                    </div>
+                    <p class="quote-description"></p>
+                    <div class="quote-actions">
+                        <i class="far fa-edit"></i>
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
